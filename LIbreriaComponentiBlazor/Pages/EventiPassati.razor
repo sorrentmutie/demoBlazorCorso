@@ -1,0 +1,12 @@
+﻿@page "/eventipassati"
+
+<MioPrimoComponente Eventi="Eventi" Titolo="Eventi Passati" />
+
+@code {
+
+    List<Evento>? Eventi = new List<Evento>
+    {
+        new Evento { Id = 1, Data = DateTime.Today.AddDays(-7), Località = "Napoli", Titolo = "Prima lezione Blazor" },
+        new Evento { Id = 2, Data = DateTime.Today.AddDays(-14), Località = "Remoto", Titolo = "Seconda lezione Blazor" }
+    };
+}

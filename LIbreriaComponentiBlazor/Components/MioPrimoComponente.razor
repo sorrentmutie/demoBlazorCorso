@@ -1,0 +1,57 @@
+﻿<MiaCard Title="@Titolo" Text="Il mio primo componente">
+    <Contenuto>
+        <h3>Esperimento</h3>
+    </Contenuto>
+</MiaCard>
+
+
+@if(Eventi != null)
+{
+    <p>Numero di eventi: @Eventi.Count </p>
+
+    <table class="table table-bordered table-striped table-hover">
+         <thead>
+             <tr>
+                <th>Id</th>
+                <th>Titolo</th>
+                <th>Localita</th>
+                <th>Data</th>
+                <th></th>
+            </tr>
+         </thead>
+         <tbody>
+
+            @foreach (var evento in Eventi)
+            {
+               <tr>  
+                   <td>@evento.Id</td>
+                   <td>@evento.Titolo</td>
+                   <td>@evento.Località</td>
+                   <td>@evento.Data.ToShortDateString()</td>
+                   <td>
+                       <button @onclick="() => OnElimina.InvokeAsync(evento)" class="btn btn-danger">Elimina</button>
+                       <button @onclick="() => OnModifica.InvokeAsync(evento)" class="btn btn-warning">Modifica</button>
+                   </td>
+                </tr>
+            }
+         </tbody>
+    </table>
+}
+
+
+
+@code {
+
+    [Parameter]
+    public List<Evento>? Eventi { get; set; }
+
+    [Parameter]
+    public EventCallback<Evento> OnElimina { get;set; }
+
+    [Parameter]
+    public EventCallback<Evento> OnModifica { get; set; }
+
+    [Parameter] 
+    public string? Titolo { get; set; }
+
+}

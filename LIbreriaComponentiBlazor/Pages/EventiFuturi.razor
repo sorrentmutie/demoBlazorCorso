@@ -1,0 +1,67 @@
+﻿@page "/eventifuturi"
+@using LIbreriaComponentiBlazor.Components
+@inject IGestioneEventi servizio
+
+<button class="btn btn-info" @onclick="Aggiungi">Aggiungi</button>
+
+
+@if(Evento == null)
+{
+    <MioPrimoComponente Eventi="Eventi" OnElimina="Elimina" Titolo="Eventi Futuri"
+        OnModifica="Modifica" />
+    <p>@Contatore</p>
+} else
+{
+    <DettaglioEvento Evento="Evento" OnAnnulla="Annulla" OnSalva="Salva"></DettaglioEvento>
+}
+
+
+
+
+@code {
+    List<Evento>? Eventi;
+    int Contatore;
+    private Evento? Evento;
+
+    protected override void OnInitialized()
+    {
+        // var servizio = new ServizioEventi();
+        Eventi = servizio.EstraiEventi();
+        Contatore = servizio.DammiContatore();
+    }
+
+    private void Annulla()
+    {
+        Evento = null;
+    }
+
+    private void Salva(Evento evento)
+    {
+        Evento = null;
+
+        if(evento.Id == 0)
+        {
+            servizio.Aggiungi(evento);
+        } else
+        {
+            servizio.Modifica(evento);
+        }
+
+        Eventi = servizio.EstraiEventi();
+    }
+
+    private void Elimina(Evento evento)
+    {
+        Eventi?.Remove(evento);
+    }
+
+    private void Modifica(Evento evento)
+    {
+        Evento = evento;
+    }
+
+    private void Aggiungi()
+    {
+        Evento = new Evento { Data = DateTime.Today }; 
+    }
+}
