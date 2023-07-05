@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kxOUx7YOp7vhCSb4GrB9g9iPZXe9UAuYLcdf0paL6E0=",
+  "Hash": "DtF77l0YErWzcodZqTM12HIFjy9uaTFbhsYz03xeEFM=",
   "Source": "MiaAppBlazorServer",
   "BasePath": "_content/MiaAppBlazorServer",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    },
+    {
+      "Identity": "E:\\corsi\\blazor\\day1\\LIbreriaComponentiBlazor\\wwwroot\\js\\mioPrimoFile.js",
+      "SourceId": "LIbreriaComponentiBlazor",
+      "SourceType": "Project",
+      "ContentRoot": "E:\\corsi\\blazor\\day1\\LIbreriaComponentiBlazor\\wwwroot\\",
+      "BasePath": "_content/LIbreriaComponentiBlazor",
+      "RelativePath": "js/mioPrimoFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mioPrimoFile.js"
     },
     {
       "Identity": "E:\\corsi\\blazor\\day1\\MiaAppBlazorServer\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MiaAppBlazorServer.styles.css",

@@ -1,8 +1,73 @@
 ﻿@page "/"
 @inject IGestioneEventi servizio
+@inject IJSRuntime jsRuntime
+@using LIbreriaComponentiBlazor
+@using Microsoft.JSInterop
+@using LIbreriaComponentiBlazor.Models
+@using LIbreriaComponentiBlazor.Components
 
 <PageTitle>Index</PageTitle>
 
 <h1>Hello, world!</h1>
 
 <p>@servizio.DammiContatore()</p>
+
+<button class="btn btn-success" @onclick="MyInterop">OK</button>
+<button class="btn btn-success" @onclick="MyInstanceInterop">Ok Instance</button>
+
+@*<Chart ChartType="@ChartType.Line" ChartData="chartData"></Chart>
+<Chart ChartType="@ChartType.Bar" ChartData="chartData"></Chart>*@
+
+<input type="checkbox" @bind="MostraPetrolio" />
+
+<Chart Labels="labels" ChartType="ChartType.Line" title="Mio Chart" style="background-color: lightyellow">
+    <Series Values="@prezzoOro"></Series>
+    @if(MostraPetrolio)
+    {
+        <Series Values="@prezzoPetrolio"></Series>
+    })
+</Chart>
+
+<Chart Labels="labels" ChartType="ChartType.Bar" title="Mio Chart" style="background-color: lightgreen">
+      <Series Values="@prezzoOro"></Series>
+</Chart>
+
+
+
+
+@code {
+    private bool MostraPetrolio = true;
+
+    private static List<string> labels = new List<string> 
+        { "January", "February", "March", "April", "May", "June", "July" };
+    private static List<double> prezzoOro = new List<double> { 65, 59, 80, 81, 56, 55, 40 };
+    private static List<double> prezzoPetrolio = new List<double> { 25, 27, 22, 17, 18, 19, 20 };
+
+    //private ChartData chartData = new ChartData
+    //    {
+    //        Labels = labels,
+    //        Series = new List<SeriesData>
+    //     {
+    //         new SeriesData {  Data = prezzoOro },
+    //         new SeriesData {  Data = prezzoPetrolio }
+    //     }
+    //};
+
+
+
+        [JSInvokable]
+        public static Task<int[]> DammiNumeriInteriAsync()
+        {
+            return Task.FromResult(new [] {1,2,3,4});
+        }
+
+        private async Task MyInterop()
+        {
+            await jsRuntime.InvokeVoidAsync("chiamaDotNet");
+        }
+        private async Task MyInstanceInterop()
+        {
+            var myInterop = new HelloInterop(jsRuntime);
+            await myInterop.CallHelloHelperSayHello("Mario Rossi");
+        }
+}

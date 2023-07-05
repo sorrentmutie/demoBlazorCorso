@@ -1,0 +1,59 @@
+﻿@page "/reqres"
+@using LIbreriaComponentiBlazor.Interfaces
+@using LIbreriaComponentiBlazor.Models
+@inject IReqResService service
+@using LIbreriaComponentiBlazor.Components
+
+@if(Dati != null && Dati.data != null)
+{
+    <ReqResPeople People="Dati.data"></ReqResPeople>
+    <button class="btn btn-danger" @onclick="Annulla">Annulla Richiesta</button>
+    @Messaggio
+    <button class="btn btn-info" @onclick="Crea">Crea Utente</button>
+} 
+@if(NuovoUtente != null)
+{
+    <Details TItem="ReqResNewUser" NewItem="NuovoUtente" OnSave="Salva" OnCancel="Cancella">
+        <FormFields Context="NewUser">
+
+            <MiaInputText Id="Name" Label="Nome" @bind-Value="NewUser!.name" ></MiaInputText>
+            <MiaInputText Id="Job" Label="Lavoro" @bind-Value="NewUser!.job" ></MiaInputText>
+
+
+        </FormFields>
+    </Details>
+}
+
+
+
+@code {
+    private ReqResData? Dati;
+    private ReqResNewUser? NuovoUtente;
+    private string Messaggio = " ";
+    protected override async Task OnInitializedAsync()
+    {
+        Dati = await service.GetData();
+    }
+    private void Annulla()
+    {
+        service.CancelRequest();
+        Messaggio = "Richiesta Annullata";
+    }
+    private void Crea()
+    {
+        NuovoUtente = new ReqResNewUser();
+        Dati = null;
+    }
+    private async Task Cancella()
+    {
+        Dati = await service.GetData();
+    }
+
+    private async Task Salva(ReqResNewUser user)
+    {
+        NuovoUtente = null;
+        var newUser = await service.PostNewUser(user);
+        Dati = await service.GetData();
+        Messaggio = newUser!.createdAt.ToShortTimeString();
+    }
+}

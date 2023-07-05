@@ -73,6 +73,18 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "E:\\corsi\\blazor\\day1\\DemoBlazorWebAssembly\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\corsi\\blazor\\day1\\DemoBlazorWebAssembly\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\corsi\\blazor\\day1\\DemoBlazorWebAssembly\\wwwroot\\js\\myChart.js",
+      "PackagePath": "staticwebassets\\js\\myChart.js"
+    },
+    {
       "Id": "E:\\corsi\\blazor\\day1\\DemoBlazorWebAssembly\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },

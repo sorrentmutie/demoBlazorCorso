@@ -10,9 +10,13 @@
     <link href="css/app.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="DemoBlazorWebAssembly.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 </head>
 
 <body>
+
+  
+
     <div id="app">
     </div>
 
@@ -22,6 +26,35 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var myModal;
+
+        window.apriModale = (id) => {
+            myModal = new bootstrap.Modal(document.getElementById(id));
+            myModal.show();
+        }
+
+        window.chiudeModale = () => {
+            myModal.hide();
+        }
+
+        window.chiamaDotNet = () => {
+            DotNet.invokeMethodAsync('LIbreriaComponentiBlazor', 'DammiNumeriInteriAsync')
+                .then(numeri => {
+                    console.log(numeri);
+                });
+
+        }
+
+        window.sayHello = function (helper) {
+            helper.invokeMethodAsync('SayHello')
+                .then(r => { console.log(r) });
+        }
+
+    </script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/myChart.js"></script>
 </body>
 
 </html>

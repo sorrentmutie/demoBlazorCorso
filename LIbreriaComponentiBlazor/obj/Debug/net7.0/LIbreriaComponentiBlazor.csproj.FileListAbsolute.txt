@@ -14,11 +14,11 @@ E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\staticwebassets\m
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\staticwebassets.pack.json
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\staticwebassets.build.json
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\staticwebassets.development.json
+E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\bundle\LIbreriaComponentiBlazor.styles.css
+E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\projectbundle\LIbreriaComponentiBlazor.bundle.scp.css
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\LIbreriaComponentiBlazor.dll
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\refint\LIbreriaComponentiBlazor.dll
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\LIbreriaComponentiBlazor.pdb
 E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\ref\LIbreriaComponentiBlazor.dll
-E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
-E:\corsi\blazor\day1\LIbreriaComponentiBlazor\obj\Debug\net7.0\scopedcss\projectbundle\LIbreriaComponentiBlazor.bundle.scp.css

@@ -1,13 +1,13 @@
-﻿<div class="card" style="width: 18rem;">
-    <div class="card-body">
+﻿<div class="card col-md-4" style="margin-bottom:10px">
+    @if (Contenuto != null)
+    {
+        @Contenuto
+    }
+    <div class="card-body" >
         <h5 class="card-title">@Title</h5>
         <p class="card-text">   
             @Text            
         </p>
-        @if(Contenuto != null)
-        {
-            @Contenuto
-        }
     </div>
 </div>
 
@@ -15,5 +15,4 @@
     [Parameter] public string? Title { get; set; }
     [Parameter] public string? Text { get; set; }
     [Parameter] public RenderFragment? Contenuto { get; set; }
-
 }

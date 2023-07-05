@@ -1,6 +1,9 @@
 ﻿@page "/counter"
+@using Microsoft.JSInterop
+@using LIbreriaComponentiBlazor.Interop
+@using LIbreriaComponentiBlazor.Components
+@inject IJSRuntime jsService
 
-<PageTitle>Contatore </PageTitle>
 
 <h1>Counter</h1>
 
@@ -8,11 +11,41 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+@saluto
+@mioContatore
+
+<MIaModale Id="mioDiv" Title="Esempio di modale" Body="Mio esempio di body"
+    OnSave="Save"  ></MIaModale>
+
+<button class="btn btn-primary" @onclick="ApriModale"> Apri Modale</button>
+
 @code {
     private int currentCount = 0;
+    private string saluto = "";
+    private int mioContatore;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var interop = new MiaClasseInteropJavaScript(jsService);
+
+        //saluto = await jsService.InvokeAsync<string>("miaPrimaFunzione");
+        //mioContatore = await jsService.InvokeAsync<int>("miaSecondaFunzione", "salvatore");
+        saluto = await interop.MiaPrimaFunzione();
+        mioContatore = await interop.MiaSecondaFunzione("mario");
+    }
+
+    private async Task ApriModale()
+    {
+        await jsService.InvokeVoidAsync("apriModale", "mioDiv");
+    }
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+
+    private void Save()
+    {
+        
     }
 }

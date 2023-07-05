@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/Chart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDaGFydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/DettaglioEvento.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEZXR0YWdsaW9FdmVudG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,8 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaWFDYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/MiaInputText.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaWFJbnB1dFRleHQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/MIaModale.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNSWFNb2RhbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/MioPrimoComponente.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaW9Qcmltb0NvbXBvbmVudGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Components/ReqResPeople.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSZXFSZXNQZW9wbGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Pages/Counter.razor]
@@ -50,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Pages/ReqResPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVxUmVzUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/corsi/blazor/day1/LIbreriaComponentiBlazor/Shared/SurveyPrompt.razor]

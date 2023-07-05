@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+NT/NtnEN/ps5W6Ujxr+Nr+7PJAINpvW9wesjsNz67w=",
+  "Hash": "fY9CSVPt8rClGmv3Jh6U6k+Ye0VWhZ6yElHBNqsUcMU=",
   "Source": "LIbreriaComponentiBlazor",
   "BasePath": "_content/LIbreriaComponentiBlazor",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    },
+    {
+      "Identity": "E:\\corsi\\blazor\\day1\\LIbreriaComponentiBlazor\\wwwroot\\js\\mioPrimoFile.js",
+      "SourceId": "LIbreriaComponentiBlazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\corsi\\blazor\\day1\\LIbreriaComponentiBlazor\\wwwroot\\",
+      "BasePath": "_content/LIbreriaComponentiBlazor",
+      "RelativePath": "js/mioPrimoFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mioPrimoFile.js"
     }
   ]
 }

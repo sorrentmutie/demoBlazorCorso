@@ -1,0 +1,34 @@
+﻿@using Microsoft.JSInterop
+@using LIbreriaComponentiBlazor.Models
+@inject IJSRuntime jsRuntime
+
+<div @ref="reference" class="ct-chart ct-perfect-fourth" @attributes="Attributes"></div>
+
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
+
+
+@code {
+    ElementReference reference;
+    [Parameter] public ChartData ChartData { get; set; } = new ChartData();
+    [Parameter] public ChartType ChartType { get; set; } = ChartType.Line;
+    [Parameter] public IEnumerable<string> Labels { get; set; } = Enumerable.Empty<string>();
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object>? Attributes { get; set; }
+    
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        ChartData.Labels = Labels.ToList();
+        if (firstRender)
+        {            
+            await jsRuntime.InvokeVoidAsync("createChart4", reference, ChartData, ChartType.ToString() );
+        } else
+        {
+            await jsRuntime.InvokeVoidAsync("updateChart", reference, ChartData);
+        }
+    }
+}

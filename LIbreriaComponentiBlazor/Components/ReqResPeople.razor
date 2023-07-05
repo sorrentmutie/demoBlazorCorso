@@ -1,0 +1,20 @@
+﻿@using LIbreriaComponentiBlazor.Models
+
+@if(People != null)
+{
+    <div class="row">
+    @foreach (var person in People)
+    {
+        <MiaCard Title="@person.ToString()"
+          Text="@person.email">
+          <Contenuto>
+           <img src="@person.avatar" style="width:100px"/>
+          </Contenuto>
+        </MiaCard>
+    }
+    </div>
+}
+
+@code {
+    [Parameter] public Person[]? People { get; set; }
+}
